@@ -1,7 +1,6 @@
 body{
     font-family: 'Montesart', sans-serif;
     background: url('render-2.jpg') no-repeat center fixed;
-    /* background: linear-gradient(135deg, #e8b790, #cfa4a1, #a7c5cf); */
     background-size: cover;
     margin: 0;
     padding: 0;
