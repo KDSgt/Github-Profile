@@ -1,0 +1,162 @@
+body{
+    font-family: 'Montesart', sans-serif;
+    background: url('render-2.jpg') no-repeat center fixed;
+    /* background: linear-gradient(135deg, #e8b790, #cfa4a1, #a7c5cf); */
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    height: 100vh;
+}
+
+.container{
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 80px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    padding: 20px;
+}
+
+h1{
+    font-family: 'Georgia', serif;
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+input[type="text"]{
+    padding: 10px;
+    width: 70%;
+    border: 2px solid #36ad98;
+    border-radius: 5px;
+    font-size: 18px;
+    outline: none;
+}
+
+button{
+    padding: 10px 20px;
+    background-color: #36ad98;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover{
+    background-color: #268e7c;
+}
+
+#userInfo{
+    display: none;
+    margin-top: 20px;
+    animation: fadeIn 1s;
+}
+
+.avatar img{
+    max-width: 100px;
+    border-radius: 50%;
+    border: 5px solid #36ad98;
+    transition: transform 0.3s ease-in-out;
+}
+
+.avatar img:hover{
+    transform: scale(1.15); 
+}
+
+.user-info p{
+    margin: 10px 0;
+    font-weight: bold;
+    color: #333;
+}
+
+a{
+    text-decoration: none;
+    color: #36ad98;
+    font-weight: bold;
+}
+
+a#profileLink{
+    display: block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #0366d6;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.card-box{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.card{
+    flex: 1;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin: 0 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover{
+    transform: scale(1.15);
+}
+
+.card h2{
+    color: #333;
+    font-size: 1.5rem;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+.card p{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #36ad98;
+    opacity: 0;
+    animation: fadeIn 1s 0.3s ease-in-out forwards;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px){
+    input[type="text"]{
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px){
+    .container{
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 768px){
+    .card-box{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card{
+        margin: 10px 0;
+    }
+}
